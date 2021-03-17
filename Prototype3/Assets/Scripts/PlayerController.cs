@@ -27,9 +27,14 @@ public class PlayerController : MonoBehaviour
         coll = GetComponent<Collider2D>();
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         Movement();
+    }
+
+    private void FixedUpdate()
+    {
+        
 
         animationState(); 
         //setting animation based on Enumerator state
