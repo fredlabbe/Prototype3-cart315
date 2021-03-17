@@ -54,6 +54,7 @@ public class PlayerController : MonoBehaviour
             Destroy(collision.gameObject);
             cherries += 1;
             cherryText.text = cherries.ToString();
+            SoundManagerScript.PlaySound("pickup");
         }
     }
 
