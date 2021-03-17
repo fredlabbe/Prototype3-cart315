@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -29,7 +30,12 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        Movement();
+        Movement(); 
+
+        if(rb.transform.position.y < -33)
+        {
+            SceneManager.LoadScene("SampleScene");
+        }
     }
 
     private void FixedUpdate()
